@@ -1,12 +1,19 @@
+// app/layout.tsx
+
+import './globals.css';
+import { ReactNode } from 'react';
+
 export const metadata = {
   title: 'Goditek',
-  description: 'Tienda de tecnología y servicios técnicos',
+  description: 'Rediseño moderno del sitio web de Goditek',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="bg-white text-gray-900 font-sans">
+        {children}
+      </body>
     </html>
   );
 }
